@@ -1,0 +1,35 @@
+<div class="card border-primary mb-3" >
+  <div class="card-header">
+    <h2 class="text-center">Responsables PPP</h2> 
+  </div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de Responsables PPP</h5>
+
+      <table class="table table-bordered table-striped">
+          <thead>
+            <th>Identificacion</th>
+            <th>Nombres y Apellidos</th>
+            <th>titulo</th>
+            <th>Cargo laboral</th>
+            <th>Rol</th>
+            <th>Materias</th>
+            <th>Fecha Final</th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let responsable of Responsable">
+                  <td>{{responsable.identificacion}}</td>
+                  <td>{{responsable.nombres_completo}}</td>
+                  <td>{{responsable.titulo}}</td>
+                  <td>{{responsable.docente_tipo_tiempo}}</td>
+                  <td>{{responsable.rol}}</td>
+                  <td>{{responsable.materias}}</td>
+                  <td>{{responsable.fecha}}
+                  </td>
+                </tr>
+          </tbody>
+        
+      </table>
+    </div>
+  </div>
+
+ 

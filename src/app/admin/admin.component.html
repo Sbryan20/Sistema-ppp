@@ -1,0 +1,65 @@
+<div class="card border-primary mb-3">
+  <div class="card-header">
+    <h2 class="text-center">Asignación Docente</h2>
+  </div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Listado de Docentes</h5>
+    
+<form (ngSubmit)="guardarRol()">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <th>Nombres y Apellidos</th>
+        <th>Titulo</th>
+        <th>Cargo Laboral</th>
+        <th>Materias</th>
+        <th>Carreras</th>
+        <th>Rol</th>
+        <th>Fecha final</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let docente of Docs">
+          <td >{{docente.nombres_completo}}</td>
+          <td>{{docente.titulo}}</td>
+          <td>{{docente.docente_tipo_tiempo}}</td>
+          <td>
+            
+            <select class="btn btn-outline-ligth dropdown-toggle" name="rol" id="rol">
+              <option class="" *ngFor="let materia of docente.materias" disabled selected>{{materia.nombre}}</option>
+            </select>
+
+          </td>
+          <td>
+            <select class="btn btn-outline-ligth dropdown-toggle" name="rol" id="rol">
+              <option class="" *ngFor="let carrera of docente.carreras" disabled selected>{{carrera.nombrecarrera}}</option>
+            </select>
+
+          </td>
+          <td>
+            <select class="btn btn-outline-ligth dropdown-toggle" name="rol" id="rol" onchange="valor()">
+              <option class="" disabled selected>Seleccionar</option>
+              <option value="1">Coordinador</option>
+              <option value="2">Docente de apoyo</option>
+              <option value="3">Director de proyecto</option>
+              <option value="4">Responsable PPP</option>
+            </select>
+          </td>
+          <td>
+            <div>
+              <input matInput [matDatepicker]="picker" >
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <button class="btn btn-success guar" role="button">Guardar</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+  </div>
+</div>
+

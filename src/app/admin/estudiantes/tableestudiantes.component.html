@@ -1,0 +1,33 @@
+
+<div class="card border-primary mb-3" >
+  <div class="card-header">
+    <h2 class="text-center">Estudiantes</h2> 
+  </div>
+    <div class="card-body text-primary">
+      <h5 class="card-title">Listado de Estudiantes</h5>
+
+      <table class="table table-bordered table-striped">
+          <thead>
+              <th>Identificacion</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Correo</th>
+              <th>Telefono</th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let estudiante of Estudiante">
+                  <td>{{estudiante.identificacion}}</td>
+                  <td>{{estudiante.nombre}}</td>
+                  <td>{{estudiante.apellido}}</td>
+                  <td>{{estudiante.correo}}</td>
+                  <td>{{estudiante.telefono}}</td>
+                  <td>
+                  </td>
+                </tr>
+          </tbody>
+        
+      </table>
+    </div>
+  </div>
+
+ 

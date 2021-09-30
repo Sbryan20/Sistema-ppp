@@ -1,0 +1,596 @@
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar-->
+  <div class="border-end bg-dark" id="sidebar-wrapper">
+    <div class="p-2" style="background-color: white">
+      <img
+        src="assets/layout/images/logo.png"
+        style="width: 50%"
+        class="mx-auto d-block"
+      />
+    </div>
+
+    <div [ngSwitch]="rol">
+      <div id="sidebar-accordion" class="accordion">
+        <!--Administrador-->
+        <div class="list-group" *ngSwitchCase="'admin'">
+          <a
+            href="admin"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            Asignacion Docente
+          </a>
+
+          <a
+            href="#dashboard-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            Roles
+          </a>
+          <div
+            id="dashboard-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              href="nav-link"
+              routerLink="/docenteapoyo"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="list-group-item list-group-item-action bg-dark text-light"
+            >
+              Docente de apoyo
+            </a>
+
+            <a
+              href="nav-link"
+              routerLink="/responsable"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="list-group-item list-group-item-action bg-dark text-light"
+            >
+              Responsable de PPP
+            </a>
+
+            <a
+              href="nav-link"
+              routerLink="/director_p"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="list-group-item list-group-item-action bg-dark text-light"
+            >
+              Directores de Proyecto
+            </a>
+
+            <a
+              href="nav-link"
+              routerLink="/coordinador"
+              data-toggle="collapse"
+              aria-expanded="false"
+              class="list-group-item list-group-item-action bg-dark text-light"
+            >
+              Coordinadores de Vinculación
+            </a>
+          </div>
+
+          <a
+            href="nav-link"
+            routerLink="/estudiantes"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            Estudiantes
+          </a>
+        </div>
+
+        <!--estudiante-->
+        <div class="list-group" *ngSwitchCase="'estudiante'">
+          <a class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-shopping-cart mr-3" aria-hidden="true"></i>Solicitud
+          </a>
+
+          <a
+            href="#dashboard-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>mis
+            solicitudes
+          </a>
+          <div
+            id="dashboard-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              href=""
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              href=""
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+            <a
+              href=""
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 3
+            </a>
+          </div>
+
+          <a
+            href="#profile-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            <i class="fa fa-user mr-3" aria-hidden="true"></i>notificacciones
+          </a>
+          <div
+            id="profile-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+          </div>
+        </div>
+
+        <!--Responsable PPP -Convocatoria -->
+        <div class="list-group" *ngSwitchCase="'responsablePPP'">
+          <a  href="nav-link"
+          routerLink="/convocatoria" class="list-group-item list-group-item-action bg-dark text-light">
+            Convocatoria
+          </a>
+          <a
+            href="#dashboard-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            Seleccion e
+            informe
+          </a>
+          <div
+            id="dashboard-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              href="nav-link" routerLink="/seleccion-e"
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Seleccion
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Informe
+            </a>
+            
+          </div>
+          <a
+            href="#profile-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            Respuesta al
+            estudiante
+          </a>
+          <div
+            id="profile-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+          </div>
+          <a
+            href="#profile-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            Recepcion de
+            solicitud
+          </a>
+          <div
+            id="profile-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+          </div>
+          <a
+            href="#profile-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light">
+            Generar informe
+          </a>
+          <div
+            id="profile-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+          </div>
+        </div>
+
+        <!--Coordinador de carrear -->
+        <div class="list-group" *ngSwitchCase="'coordinador'">
+          <a class="list-group-item list-group-item-action bg-dark text-light">
+            <i class="fa fa-shopping-cart mr-3" aria-hidden="true"></i>Inicio
+          </a>
+
+          <a
+            href="#dashboard-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            <i class="fa fa-tachometer mr-3" aria-hidden="true"></i>Generar
+            proyecto
+          </a>
+          <div
+            id="dashboard-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              href=""
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Seleccion
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Informe
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 3
+            </a>
+          </div>
+
+          <a
+            href="#profile-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            <i class="fa fa-user mr-3" aria-hidden="true"></i>Docentes
+          </a>
+          <div
+            id="profile-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              href=""
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+          </div>
+
+          <a
+            href="#profile-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            <i class="fa fa-user mr-3" aria-hidden="true"></i>Soporte TIC
+          </a>
+          <div
+            id="profile-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+          </div>
+
+          <a
+            href="#profile-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            <i class="fa fa-user mr-3" aria-hidden="true"></i>Correo secretaria
+          </a>
+          <div
+            id="profile-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+          </div>
+
+          <a
+            href="#profile-items"
+            data-toggle="collapse"
+            aria-expanded="false"
+            class="list-group-item list-group-item-action bg-dark text-light"
+          >
+            <i class="fa fa-user mr-3" aria-hidden="true"></i>Crear proyecto
+          </a>
+          <div
+            id="profile-items"
+            class="collapse"
+            data-parent="#sidebar-accordion"
+          >
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 1
+            </a>
+            <a
+              class="
+                list-group-item list-group-item-action
+                bg-dark
+                text-light
+                pl-5
+              "
+            >
+              Item 2
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <!-- Page content wrapper-->
+  <div id="page-content-wrapper">
+    <!-- Top navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary border-bottom">
+      <div class="container-fluid">
+        <button class="btn btn-primary" id="sidebarToggle"> 
+          <i class="bi bi-list"></i>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="50"
+            height="50"
+            fill="currentColor"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation" *ngFor="let rol of Roles"
+        >{{rol.id_admin}}
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
+
+        <div href="#" class="ng-tns-c112-0" *ngFor="let rol of Roles">
+          <span
+            class="topbar-item-text ng-tns-c112-0"
+            style="font-size: 20px; margin-right: 60px; color: white"
+          >
+            {{ rol.nombre }}
+          </span>
+          <img
+            alt=""
+            class="topbar-icon ng-tns-c112-0"
+            style="height: 47px; position: absolute; right: 90px"
+            [src]="rol.imagen"
+          />
+
+          
+            <button class="btn btn-primary">
+              <i class="bi bi-arrow-bar-right"></i>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="currentColor"
+                class="bi bi-arrow-bar-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8zm-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5z"
+                />
+              </svg>
+            </button>
+
+        </div>
+      </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container-fluid">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

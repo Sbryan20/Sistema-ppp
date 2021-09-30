@@ -1,0 +1,16 @@
+<div class=" text-center">
+    <h2>Proyectos</h2>
+</div>
+
+<div class="row">
+<div class="card border-dark mb-3" style="max-width: 18rem;" *ngFor="let proyecto of Proyecto" 
+type="button" href="nav-link" routerLink="/anexo2">
+    <div class="card-header bg-transparent border-dark">{{proyecto.nombre}}</div>
+    <div class="card-body text-dark">
+      <h5 class="card-title">{{proyecto.director}}</h5>
+      <p class="card-text">{{proyecto.docente}}.</p>
+    </div>
+  </div>
+</div>
+
+  

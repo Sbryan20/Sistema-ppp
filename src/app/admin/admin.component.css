@@ -1,0 +1,17 @@
+.card{
+    margin-top:  20px;
+}
+
+
+.card-body{
+    height: 700px;
+    overflow: auto;
+    width: 100%;
+}
+
+
+
+.btn.guar{
+    width: 100px;
+}
+
